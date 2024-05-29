@@ -1,37 +1,13 @@
 # auction
 
-cargo-near-new-project-description
-
-## How to Build Locally?
-
-Install [`cargo-near`](https://github.com/near/cargo-near) and run:
+## Deploy the Contract
+Having our account created, we can now deploy the contract into it:
 
 ```bash
-cargo build
+near contract deploy yashtotla.testnet use-file ./target/wasm32-unknown-unknown/release/auction.wasm without-init-call network-config testnet sign-with-keychain send
 ```
 
-## How to Test Locally?
+Transaction ID: ```F3htsTvDTipGTAZR2z8cxYFnxTQNfPq2LHg45tuseZap```
 
-```bash
-cargo test
-```
-
-## How to Deploy?
-
-Deployment is automated with GitHub Actions CI/CD pipeline.
-To deploy manually, install [`cargo-near`](https://github.com/near/cargo-near) and run:
-
-```bash
-cargo near deploy <account-id>
-```
-
-## Useful Links
-
-- [cargo-near](https://github.com/near/cargo-near) - NEAR smart contract development toolkit for Rust
-- [near CLI](https://near.cli.rs) - Iteract with NEAR blockchain from command line
-- [NEAR Rust SDK Documentation](https://docs.near.org/sdk/rust/introduction)
-- [NEAR Documentation](https://docs.near.org)
-- [NEAR StackOverflow](https://stackoverflow.com/questions/tagged/nearprotocol)
-- [NEAR Discord](https://near.chat)
-- [NEAR Telegram Developers Community Group](https://t.me/neardev)
-- NEAR DevHub: [Telegram](https://t.me/neardevhub), [Twitter](https://twitter.com/neardevhub)
+To see the transaction in the transaction explorer, please open this url in your browser:
+https://explorer.testnet.near.org/transactions/F3htsTvDTipGTAZR2z8cxYFnxTQNfPq2LHg45tuseZap
